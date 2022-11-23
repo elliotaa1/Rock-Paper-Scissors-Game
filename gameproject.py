@@ -3,7 +3,7 @@ from random import randint
 rockpaperscissors = ["Rock", "Paper", "Scissors"]
 
 randomChoice = rockpaperscissors[randint(0,2)]
-# print(*randomChoice)
+print(*randomChoice)
 
 print("Welcome to Rock Paper Scissors!")
 print("The computer will choose randomly between rock, paper and scissors and it is your job to win!")
@@ -24,29 +24,29 @@ while computerCounter < 3 and playerCounter < 3 or n == 'y':
         if randomChoice.lower() == 'paper':
             print("You lose !", randomChoice,"covers", player)
             computerCounter +=1
-            print("The computer has: "+str(computerCounter)+"points.")
+            print("The computer has: "+str(computerCounter)+ " points.")
         else:
             print("You won!", player,'smashes', randomChoice)
             playerCounter +=1
-            print("You now have: "+str(playerCounter)+"points.")
+            print("You now have: "+str(playerCounter)+ " points.")
     elif player.lower() == 'scissors':
         if randomChoice.lower() == 'rock':
             print("You lose!", randomChoice,'smashes', player)
             computerCounter +=1
-            print("The computer has: "+str(computerCounter)+"points.")
+            print("The computer has: "+str(computerCounter)+ " points.")
         else:
             print("You win!", player,'cuts', randomChoice)
             playerCounter +=1
-            print("You now have: "+str(playerCounter)+"points.")
+            print("You now have: "+str(playerCounter)+ " points.")
     elif player.lower() == 'paper':
         if randomChoice.lower() == 'scissors':
             print("You lose!", randomChoice, 'cuts', player)
             computerCounter +=1
-            print("The computer has: "+str(computerCounter)+"points.")
+            print("The computer has: "+str(computerCounter)+ " points.")
         else:
             print('You win!', player,'covers', randomChoice)
             playerCounter +=1
-            print("You now have: "+str(playerCounter)+"points.")
+            print("You now have: "+str(playerCounter)+ " points.")
     else:
         print("Invalid input. No point awarded. Try again.")
     
@@ -58,10 +58,10 @@ while computerCounter < 3 and playerCounter < 3 or n == 'y':
             playerCounter = 0
             computerCounter = 0
             print("Game is restarting . . . .")
-        elif replay.lower() == 'n':
+        if replay.lower() == 'n':
             print("Thanks for playing!")
             break
-        while replay != 'y' and replay !='n':
+        while replay.lower() != 'y' and replay.lower() !='n':
             print("Invalid input. Try again")
             replay = input("Would you like to play again? Y/N: ")
    
@@ -73,13 +73,13 @@ while computerCounter < 3 and playerCounter < 3 or n == 'y':
             playerCounter = 0
             computerCounter = 0
             print("Game is restarting . . . .")
-        elif replay.lower() == 'n':
+        if replay.lower() == 'n':
             print("Thanks for playing!")
             break
-        while replay != 'y' and replay !='n':
+        while replay.lower() != 'y' and replay.lower() !='n':
             print("Invalid input. Try again")
             replay = input("Would you like to play again? Y/N: ")
    
 
     randomChoice = rockpaperscissors[randint(0,2)]
-    # print(*randomChoice)
+    print(*randomChoice)
