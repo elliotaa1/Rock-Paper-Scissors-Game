@@ -3,7 +3,7 @@ from random import randint
 rockpaperscissors = ["Rock", "Paper", "Scissors"]
 
 randomChoice = rockpaperscissors[randint(0,2)]
-print(*randomChoice)
+#print(*randomChoice)
 
 print("Welcome to Rock Paper Scissors!")
 print("The computer will choose randomly between rock, paper and scissors and it is your job to win!")
@@ -82,4 +82,4 @@ while computerCounter < 3 and playerCounter < 3 or n == 'y':
    
 
     randomChoice = rockpaperscissors[randint(0,2)]
-    print(*randomChoice)
+    #print(*randomChoice)
