@@ -3,7 +3,7 @@ from random import randint
 rockpaperscissors = ["Rock", "Paper", "Scissors"]
 
 randomChoice = rockpaperscissors[randint(0,2)]
-#print(*randomChoice)
+# print(*randomChoice)
 
 print("Welcome to Rock Paper Scissors!")
 print("The computer will choose randomly between rock, paper and scissors and it is your job to win!")
@@ -50,36 +50,37 @@ while computerCounter < 3 and playerCounter < 3 or n == 'y':
     else:
         print("Invalid input. No point awarded. Try again.")
     
+    
 
     if computerCounter == 3:
         print("The computer has won.")
-        replay = input("Would you like to play again? Y/N: ")
-        if replay.lower() == 'y':
+        replay = input("Would you like to play again? y/n/yes/no: ")
+        while replay.lower() != 'y' and replay.lower() != 'yes' and replay.lower() !='n' and replay.lower() != 'no':
+            print("Invalid input. Try again")
+            replay = input("Would you like to play again? y/n/yes/no: ")
+            continue
+        if replay.lower() == 'y' or replay.lower() == 'yes':
             playerCounter = 0
             computerCounter = 0
             print("Game is restarting . . . .")
-        if replay.lower() == 'n':
+        if replay.lower() == 'n' or replay.lower() == 'no':
             print("Thanks for playing!")
             break
-        while replay.lower() != 'y' and replay.lower() !='n':
-            print("Invalid input. Try again")
-            replay = input("Would you like to play again? Y/N: ")
-   
     if playerCounter == 3:
         print("Congratulations! You won!")
-
-        replay = input("Would you like to play again? Y/N: ")
-        if replay.lower() == 'y':
+        replay = input("Would you like to play again? y/n/yes/no: ")
+        while replay.lower() != 'y' and replay.lower() != 'yes' and replay.lower() !='n' and replay.lower() != 'no':
+            print("Invalid input. Try again")
+            replay = input("Would you like to play again? y/n/yes/no: ")
+            continue
+        if replay.lower() == 'y' or replay.lower() == 'yes':
             playerCounter = 0
             computerCounter = 0
             print("Game is restarting . . . .")
-        if replay.lower() == 'n':
+        if replay.lower() == 'n' or replay.lower() == 'no':
             print("Thanks for playing!")
             break
-        while replay.lower() != 'y' and replay.lower() !='n':
-            print("Invalid input. Try again")
-            replay = input("Would you like to play again? Y/N: ")
    
 
     randomChoice = rockpaperscissors[randint(0,2)]
-    #print(*randomChoice)
+    # print(*randomChoice)
